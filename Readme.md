@@ -1,5 +1,7 @@
 # Flexbox-&-Grid-Assignment
 
+> [Deployed link](glistening-duckanoo-db2732.netlify.app)
+
 Your task is to replicate the [Minimalissimo/about](https://minimalissimo.com/suggest) site (using `FLEXBOX`, `GRID` and `responsive design`).
 
 ## What to build
