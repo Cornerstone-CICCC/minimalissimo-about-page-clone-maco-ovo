@@ -1,0 +1,166 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family:
+		system-ui,
+		-apple-system,
+		BlinkMacSystemFont,
+		"Segoe UI",
+		Roboto,
+		Oxygen,
+		Ubuntu,
+		Cantarell,
+		"Open Sans",
+		"Helvetica Neue",
+		sans-serif;
+	font-weight: 200;
+	font-size: 1.1rem;
+	margin-bottom: 500px;
+}
+
+/* === header === */
+
+header {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	width: 100%;
+
+	position: sticky;
+	top: 0;
+	background-color: white;
+	z-index: 50;
+}
+
+.head {
+	padding: 25px;
+	width: 100%;
+	border-right: 1px solid black;
+	border-bottom: 1px solid black;
+}
+
+.right {
+	border-right: none;
+}
+
+.head:hover {
+	background-color: black;
+	color: white;
+}
+
+/* === suggest === */
+
+.suggest {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	padding: 100px;
+}
+
+.suggest p {
+	grid-column: 2/4;
+	text-align: left;
+}
+
+/* === main contents === */
+
+.main-grid {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-areas:
+		"side main main"
+		"side note note"
+		"side features cost"
+		"side email email";
+
+	border-top: 1px solid black;
+	border-bottom: 1px solid black;
+}
+
+.side {
+	grid-area: side;
+	border-right: 1px solid black;
+}
+
+.content {
+	padding: 30px;
+	position: relative;
+
+	line-height: 1.4;
+}
+
+.main {
+	grid-area: main;
+}
+
+.note {
+	grid-area: note;
+	border-top: 1px solid black;
+}
+
+.features {
+	grid-area: features;
+	border-top: 1px solid black;
+	border-right: 1px solid black;
+}
+
+span {
+	text-decoration-line: underline;
+}
+
+ul {
+	padding: 30px;
+	line-height: 1.8;
+}
+
+.cost {
+	grid-area: cost;
+	border-top: 1px solid black;
+}
+
+#payment {
+	margin-top: 3rem;
+	text-align: center;
+}
+
+.email {
+	grid-area: email;
+	border-top: 1px solid black;
+	text-align: center;
+}
+
+.email:hover {
+	background-color: black;
+	color: white;
+}
+
+/* Responsible */
+@media (max-width: 768px) {
+	header {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		width: 100%;
+	}
+	.left {
+		grid-column: 1/-1;
+		justify-items: center;
+		border-right: none;
+	}
+
+	.suggest {
+		text-align: center;
+		width: 100%;
+	}
+
+	.main-grid {
+		display: flex;
+		flex-direction: column;
+	}
+
+	#payment {
+		margin-top: 1rem;
+		margin-bottom: 1rem;
+	}
+}
